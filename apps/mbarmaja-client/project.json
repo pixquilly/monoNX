@@ -14,7 +14,7 @@
         "browser": "apps/mbarmaja-client/src/main.ts",
         "polyfills": ["zone.js"],
         "tsConfig": "apps/mbarmaja-client/tsconfig.app.json",
-        "inlineStyleLanguage": "scss",
+        "inlineStyleLanguage": "less",
         "assets": [
           {
             "glob": "**/*",
@@ -27,7 +27,10 @@
           "@taiga-ui/core/styles/taiga-ui-theme.less",
           "@taiga-ui/core/styles/taiga-ui-fonts.less",
           "@taiga-ui/addon-mobile/styles/taiga-ui-mobile.less"
-        ]
+        ],
+        "stylePreprocessorOptions": {
+          "includePaths": ["node_modules"]
+        }
       },
       "configurations": {
         "production": {
