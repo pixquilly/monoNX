@@ -9,4 +9,12 @@ import { Actionbar } from "../actionbar/actionbar";
   templateUrl: './ui.html',
   styleUrls: ['./ui.scss', './ui.less'],
 })
-export class UiLib {}
+export class UiLib {
+  open = true;
+  doAction(): void{
+    console.log("Action performed");
+  }
+  toggleBar(): void{
+    this.open = !this.open;
+  }
+}

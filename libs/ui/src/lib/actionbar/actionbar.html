@@ -1,24 +1,16 @@
-<button
-    [size]="btnSize"
-    tuiButton
-    type="button"
-    (click)="open.set(true)"
->
-    Show TableBar
-</button>
-
 <tui-action-bar
-    *tuiActionBar="open()"
+    *tuiActionBar="open"
     [size]="barSize"
+    
 >
-    <span [style.width.%]="isMobile() ? 100 : null">Table bar opened</span>
+    <ng-content></ng-content>
 
     <button
         appearance="glass"
-        iconStart="@tui.trash"
+        [iconStart]="actionIcon"
         tuiButton
         type="button"
-        (click)="open.set(false)"
+        (click)="onAction()"
     >
         Remove
     </button>
@@ -27,7 +19,7 @@
         tuiIconButton
         type="button"
         [appearance]="isMobile() ? 'glass' : 'icon'"
-        (click)="open.set(false)"
+        (click)="onClose()"
     >
         Close
     </button>
