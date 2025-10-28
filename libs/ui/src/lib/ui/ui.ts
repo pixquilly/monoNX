@@ -5,6 +5,6 @@ import {TuiRoot} from '@taiga-ui/core';
   selector: 'lib-ui',
   imports: [TuiRoot, Button],
   templateUrl: './ui.html',
-  styleUrl: './ui.css',
+  styleUrl: './ui.less',
 })
 export class UiLib {}
