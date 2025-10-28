@@ -1,11 +1,21 @@
 {
   "name": "ui",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
   "sourceRoot": "libs/ui/src",
   "prefix": "lib",
-  "projectType": "library",
-  "tags": [],
   "targets": {
+    "build": {
+      "executor": "@nx/angular:package",
+      "options": {
+        "tsConfig": "libs/ui/tsconfig.lib.json",
+        "project": "libs/ui/ng-package.json",
+        "stylePreprocessorOptions": {
+          "includePaths": ["node_modules"]
+        },
+        "assets": [],
+        "styles": ["libs/ui/src/lib/ui/ui-global-styles.scss"]
+      }
+    },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],

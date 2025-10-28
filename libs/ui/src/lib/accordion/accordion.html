@@ -1,0 +1,15 @@
+<tui-accordion>
+    <!-- 
+      The '@for' loop directly replaces '*ngFor'.
+      The 'track item.key' is used here because 'keyvalue' returns a distinct object 
+      for each iteration, and the key is a stable identifier.
+    -->
+    @for (item of data | keyvalue; track item.key) {
+      <!-- The index is available using the built-in $index variable -->
+      <button [tuiAccordion]="$index === 1">{{ item.key }}</button>
+      <tui-expand>{{ item.value }}</tui-expand>
+    } @empty {
+      <!-- Optional: The '@empty' block is the clean replacement for the 'ngIf/else' pattern -->
+      <p class="tui-text_body-m">No items available to display.</p>
+    }
+  </tui-accordion>
