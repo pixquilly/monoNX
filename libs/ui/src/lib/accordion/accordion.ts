@@ -7,6 +7,7 @@ import {TuiAccordion} from '@taiga-ui/experimental';
   imports: [TuiAccordion, KeyValuePipe],
   templateUrl: './accordion.html',
   styleUrl: './accordion.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Accordion {
   

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { TuiButton, TuiAppearance, TuiSizeS, TuiSizeL, TuiSizeM } from '@taiga-ui/core';
 
 @Component({
@@ -6,6 +6,7 @@ import { TuiButton, TuiAppearance, TuiSizeS, TuiSizeL, TuiSizeM } from '@taiga-u
   imports: [TuiButton],
   templateUrl: './button.html',
   styleUrls: ['button.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Button {
   @Input() disabled = false;
