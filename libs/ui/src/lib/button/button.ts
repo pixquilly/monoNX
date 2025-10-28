@@ -9,7 +9,7 @@ import { TuiButton, TuiAppearance, TuiSizeS, TuiSizeL, TuiSizeM } from '@taiga-u
 })
 export class Button {
   @Input() disabled = false;
-  @Input() text = "click me";
+  @Input() text = ""; //placeholder that evaluates to false to use <ng-content>
   @Input() size: TuiSizeS | TuiSizeM | TuiSizeL = 'm';
   @Input() appearance = 'primary'; 
 }

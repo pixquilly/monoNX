@@ -2,4 +2,11 @@
     [size]="size" 
     [disabled]="disabled"
     [appearance]="appearance"
->{{ text }}</button>
+>
+@if (text){
+    {{ text }}
+} 
+@else {
+    <ng-content></ng-content>
+}
+</button>
