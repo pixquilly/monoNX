@@ -14,7 +14,7 @@ import { devLog } from '@utils';
 export class Actionbar {
 
   @Input({required: true}) open = false; 
-  @Input() actionIcon = '@tui.trash';
+  @Input() actionIcon = 'tui.trash'; //not used
   @Input() barSize: 's' | 'm' = 'm';
   @Input() btnSize: 's' | 'm' | 'l' = 'm';
   
