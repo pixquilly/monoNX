@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@mononx-workspace/ui": ["libs/ui/src/index.ts"]
+      "@mononx-workspace/ui": ["libs/ui/src/index.ts"],
+      "@ui": ["libs/ui/src/index.ts"],
     }
   },
   "exclude": ["node_modules", "tmp"]
