@@ -5,6 +5,6 @@ import {TuiButton} from '@taiga-ui/core';
   selector: 'lib-ui-button',
   imports: [TuiButton],
   templateUrl: './button.html',
-  styleUrls: ['./button.scss', './button.less'],
+  styleUrls: ['./button.scss'],
 })
 export class Button {}
