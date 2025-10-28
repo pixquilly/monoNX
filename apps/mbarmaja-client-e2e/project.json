@@ -1,0 +1,9 @@
+{
+  "name": "mbarmaja-client-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/mbarmaja-client-e2e/src",
+  "implicitDependencies": ["mbarmaja-client"],
+  "// targets": "to see all targets run: nx show project mbarmaja-client-e2e --web",
+  "targets": {}
+}
