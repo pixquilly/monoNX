@@ -3,7 +3,7 @@ import {toSignal} from '@angular/core/rxjs-interop';
 import {TuiBreakpointService, TuiButton} from '@taiga-ui/core';
 import {TuiActionBar} from '@taiga-ui/kit';
 import {map} from 'rxjs';
-
+import { devLog } from '@utils';
 @Component({
   selector: 'lib-ui-actionbar',
   imports: [TuiActionBar, TuiButton],
@@ -23,12 +23,12 @@ export class Actionbar {
   
   protected onAction = (): void => {
     this.doAction.emit();
-    console.log("doAction emitted");
+    devLog("doAction emitted");
   };
 
   @Input() onClose = (): void => {
     this.closeBar.emit();
-    console.log("closeBar emitted");
+    devLog("closeBar emitted");
   }
   
   protected readonly isMobile = toSignal(
