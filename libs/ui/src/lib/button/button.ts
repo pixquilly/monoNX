@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {TuiButton} from '@taiga-ui/core';
+import { Component, Input } from '@angular/core';
+import { TuiButton, TuiAppearance, TuiSizeS, TuiSizeL, TuiSizeM } from '@taiga-ui/core';
 
 @Component({
   selector: 'lib-ui-button',
@@ -7,4 +7,9 @@ import {TuiButton} from '@taiga-ui/core';
   templateUrl: './button.html',
   styleUrls: ['button.less'],
 })
-export class Button {}
+export class Button {
+  @Input() disabled = false;
+  @Input() text = "click me";
+  @Input() size: TuiSizeS | TuiSizeM | TuiSizeL = 'm';
+  @Input() appearance = 'primary'; 
+}
