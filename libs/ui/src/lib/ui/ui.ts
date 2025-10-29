@@ -3,9 +3,10 @@ import { Button } from "../button/button";
 import {TuiRoot} from '@taiga-ui/core';
 import { Accordion } from "../accordion/accordion";
 import { Actionbar } from "../actionbar/actionbar";
+import { Table } from "../table/table";
 @Component({
   selector: 'lib-ui',
-  imports: [TuiRoot, Button, Accordion, Actionbar],
+  imports: [TuiRoot, Button, Accordion, Actionbar, Table],
   templateUrl: './ui.html',
   styleUrls: ['./ui.scss', './ui.less'],
 })
