@@ -10,7 +10,7 @@ export class Highlight {
 
   constructor() {
     this.elmRef = inject(ElementRef);
-    this.elmRef.nativeElement.style.backgroundColor = 'yellow';
+    // this.elmRef.nativeElement.style.backgroundColor = 'yellow';
   }
 
   @HostListener('mouseenter') onMouseEnter() {
